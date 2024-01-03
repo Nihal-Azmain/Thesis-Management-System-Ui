@@ -1,4 +1,11 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
+import { initDropdowns } from 'flowbite'
+
+// initialize components based on data attribute selectors
+onMounted(() => {
+  initDropdowns()
+})
 </script>
 
 <template>
