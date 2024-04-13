@@ -29,11 +29,25 @@ const router = createRouter({
           component: () => import('../views/ResetPasswordView.vue'),
         },
         {
+          path: 'notice',
+          name: 'notice',
+          component: () => import('../views/NoticeBoardView.vue'),
+        },
+        {
           path: '',
           name: 'home-page',
           component: () => import('../views/HomePageView.vue'),
         },
+        {
+          path: '',
+          name: 'admin',
+          component: () => import('../views/HomePageView.vue'),
+        },
       ],
+    },
+    {
+      path: '/:pathMatch(.*)',
+      redirect: { name: 'home' },
     },
   ],
 })
